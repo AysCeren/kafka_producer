@@ -20,6 +20,9 @@ In the context of Kafka, when a producer sends a message to a Kafka topic, it re
 Topics are storage areas, keeping messages that producers send and consumers read, similar to log as data structure. With each partition of a Kafka topic, messages are stored and consumed **in the order they are produced**.
 ### What is partitions in a Kafka topic?
 One topic can be splitted into multiple partitions. Kafka distributes the partitions of a particular topic across multiple brokers. That's why Kafka is scalable and benefits from parallelism between partitions.Kafka also replicates partitions and spreads the replicas across the cluster.  This provides robust fault tolerance; if one broker fails other brokers can take over and pick up where the failed machine left off.
+
+![1_9Qm9qjZbvfV0X1pAlUUxcw](https://github.com/AysCeren/kafka_producer/assets/154695340/f87dab7d-cf72-4a67-b679-47e2fb2ef627)
+
 ### What is a broker?
 The Kafka broker is used for managing the storage of the data records/messages in the topic. We define a Kafka cluster when there is more than one broker present. The Kafka broker is responsible for transferring the conversation that the publisher is pushing in the Kafka log commit and the subscriber shall be consuming these messages. 
 ### What is Zookeeper?
