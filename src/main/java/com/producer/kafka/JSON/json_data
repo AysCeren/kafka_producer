@@ -1,0 +1,62 @@
+[
+    {
+        "firstname": "Mehmet",
+        "lastname": "Bulut",
+        "address": "Trabzon",
+        "phone": "+901199129094"
+    },
+    {
+        "firstname": "Ceren",
+        "lastname": "Yılmaz",
+        "address": "Adana",
+        "phone": "+901499062943"
+    },
+    {
+        "firstname": "Ada",
+        "lastname": "Demir",
+        "address": "Izmir",
+        "phone": "+903496773018"
+    },
+    {
+        "firstname": "Mehmet",
+        "lastname": "Sahin",
+        "address": "Antalya",
+        "phone": "+906243908577"
+    },
+    {
+        "firstname": "Emine",
+        "lastname": "Aydın",
+        "address": "Ankara",
+        "phone": "+908138645321"
+    },
+    {
+        "firstname": "Mustafa",
+        "lastname": "Dogan",
+        "address": "Konya",
+        "phone": "+905245188908"
+    },
+    {
+        "firstname": "Ali",
+        "lastname": "Ozturk",
+        "address": "Kayseri",
+        "phone": "+901693329975"
+    },
+    {
+        "firstname": "Arda",
+        "lastname": "Arslan",
+        "address": "Nigde",
+        "phone": "+904943871058"
+    },
+    {
+        "firstname": "Canan",
+        "lastname": "Bilge",
+        "address": "Eskisehir",
+        "phone": "+907601086617"
+    },
+    {
+        "firstname": "Harun",
+        "lastname": "Tas",
+        "address": "Denizli",
+        "phone": "+900161488261"
+    }
+]
