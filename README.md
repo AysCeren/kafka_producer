@@ -26,9 +26,25 @@ One topic can be splitted into multiple partitions. Kafka distributes the partit
 ### What is a broker?
 The Kafka broker is used for managing the storage of the data records/messages in the topic. We define a Kafka cluster when there is more than one broker present. The Kafka broker is responsible for transferring the conversation that the publisher is pushing in the Kafka log commit and the subscriber shall be consuming these messages. 
 ### What is Zookeeper?
+ZooKeeper handles the leadership election of Kafka brokers and manages service discovery as well as cluster topology so each broker knows when brokers have entered or exited the cluster, when a broker dies and who the preferred leader node is for a given topic/partition pair.
+### What is this data producers writing to topic?
+
+## Main Goal of This Project: 
+Kafka is pub/sub application, therefore, its main structure is composed of producers -write data to Kafka Topics (publish) and consumers -read data from Kafka Topics (subscribe). This project aims 3 things:
+      *Creating kafka topics
+      *Taking PostMapping with @RequestMapping bean
+      *Writing data to kafka
+>Technologies of this project:
+>Java
+>Spring Boot
+>Maven
 
 
-## Structure of Kafka:
+That's why you may want to use https://start.spring.io/ to initalize your file structure.
+
+![image](https://github.com/AysCeren/kafka_producer/assets/154695340/d03a740a-63e8-4359-94e2-e61b0f598b74)
+
+## Understanding Producers of Kafka:
 
       
 
