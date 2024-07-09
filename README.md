@@ -95,5 +95,4 @@ public void sendMessage(List<Contact> contact)
 
 ## Problems coders may face: 
 + It is important to run zookeeper and kafka servers. (You can check repository to look at KAFKA INSTALLATION)
-+ The ports of the application should be controlled, as a default it will run on 9092 port. Can be changed in the application.properties file: spring.kafka.producer.bootstrap-servers=localhost:xxxx
-+ 
++ The ports of the application should be controlled, as a default it will run on 9092 port. Can be changed in the application.properties file: spring.kafka.producer.bootstrap-servers=localhost:xxxx 
