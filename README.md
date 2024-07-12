@@ -96,3 +96,13 @@ public void sendMessage(List<Contact> contact)
 ## Problems coders may face: 
 + It is important to run zookeeper and kafka servers. (You can check repository to look at KAFKA INSTALLATION)
 + The ports of the application should be controlled, as a default it will run on 9092 port. Can be changed in the application.properties file: spring.kafka.producer.bootstrap-servers=localhost:xxxx 
+
+## How can we create data?
+
+Kafka is a middleman between producers & consumers. Producers are writing data to topic, consumers are consuming data from topic by using Kafka. However, it is important to note that producers are pulling data from another service. e.g.: sensors, mobile application, another database.
+
+
+![image](https://github.com/user-attachments/assets/dcd0fd27-e6e2-4e7e-b6fa-a630dcde3b3f)
+
+
+
