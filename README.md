@@ -110,10 +110,10 @@ Kafka is a middleman between producers & consumers. Producers are writing data t
 
 
 
-http: The protocol used for the request.
-localhost: The hostname, indicating that the server is running on your local machine.
-8080: The port number on which the server is listening for requests.
-publish: The specific endpoint or resource you are accessing on the server.
+- http: The protocol used for the request.
+- localhost: The hostname, indicating that the server is running on your local machine.
+- 8080: The port number on which the server is listening for requests.
+- publish: The specific endpoint or resource you are accessing on the server.
 
 
 We should choose valid request form: 
