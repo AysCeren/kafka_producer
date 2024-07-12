@@ -124,7 +124,7 @@ We should choose valid request form:
         kafkaProducer.sendMessage(contact);
 ```
 
-+ Because our application is waiting for $PostMapping, we are sending 'Post' request from PostMan, with the 'publish' 
++ Because our application is waiting for $PostMapping, we are sending 'Post' request from PostMan, with 'publish' endpoint.
 + We should determine the port address by looking in which port is assigned to our program.
         - It is possible to control from: Tomcat started on port 8080 (http) with context path '/', the port number is '8080' by default.
         - You can change by writing: server.port = xxxx
