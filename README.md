@@ -28,14 +28,6 @@ The Kafka broker is used for managing the storage of the data records/messages i
 ### What is Zookeeper?
 ZooKeeper handles the leadership election of Kafka brokers and manages service discovery as well as cluster topology so each broker knows when brokers have entered or exited the cluster, when a broker dies and who the preferred leader node is for a given topic/partition pair.
 ### What is this data producers writing to topic?
-**Data Sources: Producers can pull data from different sources, including:**
-
-         1. Databases: Producers can read data from databases and send it to Kafka. This can be done through database change data capture (CDC) tools or custom applications.
-         2. Applications: Applications can generate events based on user actions, transactions, or other application-specific triggers and send these events to Kafka.
-         3. Logs and Metrics: Producers can read log files or metrics from monitoring systems and produce these records to Kafka topics.
-         4. Sensors and IoT Devices: Data from sensors and IoT devices can be sent to Kafka via producers.
-         
-**NOTE**: We are using postman to release a data that can be pulled by Kafka Producers. However, possible sources and so on are listed above.
 
 ## Main Goal of This Project: 
 Kafka is pub/sub application, therefore, its main structure is composed of producers -write data to Kafka Topics (publish) and consumers -read data from Kafka Topics (subscribe). This project aims 3 things:
@@ -101,8 +93,29 @@ public void sendMessage(List<Contact> contact)
 
 Kafka is a middleman between producers & consumers. Producers are writing data to topic, consumers are consuming data from topic by using Kafka. However, it is important to note that producers are pulling data from another service. e.g.: sensors, mobile application, another database.
 
+**Producers sources, including:**
+
+         1. Databases: Producers can read data from databases and send it to Kafka. This can be done through database change data capture (CDC) tools or custom applications.
+         2. Applications: Applications can generate events based on user actions, transactions, or other application-specific triggers and send these events to Kafka.
+         3. Logs and Metrics: Producers can read log files or metrics from monitoring systems and produce these records to Kafka topics.
+         4. Sensors and IoT Devices: Data from sensors and IoT devices can be sent to Kafka via producers.
+         
 
 ![image](https://github.com/user-attachments/assets/dcd0fd27-e6e2-4e7e-b6fa-a630dcde3b3f)
 
+**NOTE**: We are using postman to release a data that can be pulled by Kafka Producers. However, possible sources and so on are listed above.
+### Postman Request Structure:
+
+![image](https://github.com/user-attachments/assets/a61795c8-1040-442e-b112-8879b28edafb)
 
 
+We should choose valid request form: 
+```
+@PostMapping("/publish")
+    public ResponseEntity<String> publishMessage(@RequestBody List<Contact> contact) {
+        kafkaProducer.sendMessage(contact);
+```
++ Because our application is waiting for $PostMapping, we are sending 'Post' request from PostMan.
++ We should determine the port address by looking in which port is assigned to our program.
+      - It is possible to control from: Tomcat started on port 8080 (http) with context path '/', the port number is '8080' by default.
++ You can change by writing: server.port = 8080
