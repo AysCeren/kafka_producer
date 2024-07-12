@@ -8,17 +8,14 @@ public class Contact {
     private String phone;
     private String birthDay;
     private String loginDate;
-
-
+    
     public Contact() {
         // I have added this because: include a public default constructor.
         //But not sure
     }
-
     public int getId() {
         return id;
     }
-
     public void setId(int id) {
         this.id = id;
     }
